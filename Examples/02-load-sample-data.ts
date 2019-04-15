@@ -1,19 +1,18 @@
-require("dotenv").config();
+import AWS from "aws-sdk";
+import fs from "fs";
+import dotenv from "dotenv";
 
-const AWS = require("aws-sdk");
-const fs = require("fs");
+dotenv.config();
 
-AWS.config.update({
+const docClient = new AWS.DynamoDB.DocumentClient({
   endpoint: "http://localhost:8000"
 });
-
-const docClient = new AWS.DynamoDB.DocumentClient();
 
 console.log("Importing movies into DynamoDB. Please wait.");
 
 const allMovies = JSON.parse(fs.readFileSync("./moviedata.json", "utf8"));
 
-allMovies.forEach(async movie => {
+allMovies.forEach(async (movie: any) => {
   const params = {
     TableName: "Movies",
     Item: {

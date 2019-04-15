@@ -1,12 +1,22 @@
 {
   "name": "dynamodb-on-local-examples",
   "scripts": {
-    "create-a-table": "node create-a-table.js",
-    "load-sample-data": "node load-sample-data.js"
+    "01-create-a-table": "ts-node 01-create-a-table.ts",
+    "02-load-sample-data": "ts-node 02-load-sample-data.ts",
+    "03-create-a-new-item": "ts-node 03-create-a-new-item.ts",
+    "04-read-an-item": "ts-node 04-read-an-item.ts",
+    "05-update-an-item": "ts-node 05-update-an-item.ts",
+    "06-increment-an-atomic-counter": "ts-node 06-increment-an-atomic-counter.ts"
   },
   "dependencies": {
     "aws-sdk": "^2.437.0",
     "dotenv": "^7.0.0"
+  },
+  "devDependencies": {
+    "@types/aws-sdk": "^2.7.0",
+    "@types/dotenv": "^6.1.1",
+    "ts-node": "^8.1.0",
+    "typescript": "^3.4.3"
   },
   "license": "UNLICENSED",
   "private": true

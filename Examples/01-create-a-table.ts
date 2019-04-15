@@ -1,10 +1,12 @@
-require("dotenv").config();
+import AWS from "aws-sdk";
+import { ServiceConfigurationOptions } from "aws-sdk/lib/service";
+import dotenv from "dotenv";
 
-const AWS = require("aws-sdk");
+dotenv.config();
 
 AWS.config.update({
   endpoint: "http://localhost:8000"
-});
+} as ServiceConfigurationOptions);
 
 const dynamodb = new AWS.DynamoDB();
 

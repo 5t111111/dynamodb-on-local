@@ -24,3 +24,11 @@ docker-compose down
 
 - DymanoDB Endpoint: `http://localhost:8000`
 - dynamodb-admin: `http://localhost:8001`
+
+## Examples
+
+`Examples` に `aws-sdk` を利用した Node CLI アプリケーションの例があります (WIP) 。
+
+↓ の内容に沿っています。
+
+https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/GettingStarted.NodeJs.html
