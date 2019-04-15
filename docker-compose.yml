@@ -3,8 +3,7 @@ version: "3"
 services:
   dynamodb:
     build:
-      context: .
-      dockerfile: Dockerfile.dynamodb
+      context: ./Docker/dynamodb
     command: -jar DynamoDBLocal.jar -dbPath /home/dynamodblocal/data -sharedDb
     ports:
       - "8000:8000"
@@ -13,8 +12,7 @@ services:
 
   dynamodb-admin:
     build:
-      context: .
-      dockerfile: Dockerfile.dynamodb-admin
+      context: ./Docker/dynamodb-admin
     depends_on:
       - dynamodb
     ports:
