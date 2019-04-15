@@ -1,0 +1,13 @@
+{
+  "name": "dynamodb-on-local-examples",
+  "scripts": {
+    "create-a-table": "node create-a-table.js",
+    "load-sample-data": "node load-sample-data.js"
+  },
+  "dependencies": {
+    "aws-sdk": "^2.437.0",
+    "dotenv": "^7.0.0"
+  },
+  "license": "UNLICENSED",
+  "private": true
+}
